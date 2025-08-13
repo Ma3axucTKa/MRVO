@@ -6,4 +6,5 @@ If you're trying to play Warzone 1 Verdansk / Caldera and struggle with 500m col
 - Does not touch other gametypes/gamemodes/maps, only Verdansk/Caldera and BR Gametype "mini"
 
 Planned features: Loot chests restock; Vehicles fix; Plunder optimization
+
 Autoadopt players amounts: 1; 2+; 6+; 12+;
