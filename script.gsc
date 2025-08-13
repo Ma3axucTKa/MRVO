@@ -79,39 +79,3 @@ DefineCirclesRadiuses( ) {
 }
 
 // Not like in 1.20: since we now use Mini Royale gametype to ease the pain with recreating circle from the game start, zones start with [1] index, not [0] like it was in 1.20 MRON.
-
-/*DebugPrints( ) {
-
-    // WAITING FOR PREMATCH TO END
-
-    level waittill("prematch_done");
-
-    wait 50;
-
-    level.players[0] iprintln(level.players.size);
-    level.players[0] iprintln(getDvarint("playerssizeadopt"));
-    level.players[0] iprintln(level.br_level.br_circleradii[1]);
-
-}*/
-
-// FURTHER CODE DOES NOT WORK / WAS NOT TESTED
-
-/*
-OnPlayerConnected( ) {
-    for (;;)
-    {
-        level waittill("connected", player);
-        player thread DoOnSpawn( );
-    }
-}
-
-DoOnSpawn( ) {
-    for (;;)
-    {
-        self waittill("spawned_player");
-        wait 0.5;
-        self SetOrigin(level.br_level.br_circlecenters[1] + ( 0, 0, 3000 ));
-        wait 3;
-        self iprintln("zetaforce");
-    }
-}*/
