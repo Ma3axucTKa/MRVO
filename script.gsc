@@ -18,14 +18,14 @@ Init( ) {
         {
             // ZONES TIMINGS
             level.br_level.br_circleclosetimes[0] = 2;   // starting zone close time
-            level.br_level.br_circledelaytimes[1] = 120;   // 1-2 zone delay  
-	        level.br_level.br_circleclosetimes[1] = 60;   // 2nd zone close 
-            level.br_level.br_circledelaytimes[2] = 60;   // 2-3 zone delay 
-	        level.br_level.br_circleclosetimes[2] = 60;   // 3rd zone close
-            level.br_level.br_circledelaytimes[3] = 45; // 3-4 zones delay
-	        level.br_level.br_circleclosetimes[3] = 30; // 4th zone close
-            level.br_level.br_circledelaytimes[4] = 45; // 4-5 zones delay
-	        level.br_level.br_circleclosetimes[4] = 60; // 5th zone close
+            level.br_level.br_circledelaytimes[1] = 120; // 1-2 zone delay  
+	        level.br_level.br_circleclosetimes[1] = 60;  // 2nd zone close 
+            level.br_level.br_circledelaytimes[2] = 60;  // 2-3 zone delay 
+	        level.br_level.br_circleclosetimes[2] = 60;  // 3rd zone close
+            level.br_level.br_circledelaytimes[3] = 45;  // 3-4 zones delay
+	        level.br_level.br_circleclosetimes[3] = 30;  // 4th zone close
+            level.br_level.br_circledelaytimes[4] = 45;  // 4-5 zones delay
+	        level.br_level.br_circleclosetimes[4] = 60;  // 5th zone close
         }
 
     }
@@ -37,28 +37,28 @@ DefineCirclesRadiuses( ) {
     if ( getDvarint("playerssizeadopt", 1) == 1 )
     {
         if ( level.players.size == 1 ) { // For playing alone (testing the mod)
-            level.br_level.br_circleradii[0] = 15000; // JUST EXISTING
+            level.br_level.br_circleradii[0] = 15000; // -
             level.br_level.br_circleradii[1] = 15000; // GAS CIRCLE 1
-            level.br_level.br_circleradii[2] = 12000; // // GAS CIRCLE 2
+            level.br_level.br_circleradii[2] = 12000; // GAS CIRCLE 2
             level.br_level.br_circleradii[3] = 6500; // GAS CIRCLE 3
             level.br_level.br_circleradii[4] = 3500; // GAS CIRCLE 4 | prelast circle in Mini Royale gametype
         }
         if ( level.players.size >= 2 ) {
-            level.br_level.br_circleradii[0] = 6750; // APPLYING RADIUS TO FIRST GAS CIRCLE
+            level.br_level.br_circleradii[0] = 6750; // -
             level.br_level.br_circleradii[1] = 6750; // GAS CIRCLE 1
             level.br_level.br_circleradii[2] = 6000; // GAS CIRCLE 2
             level.br_level.br_circleradii[3] = 5500; // GAS CIRCLE 3
             level.br_level.br_circleradii[4] = 3500; // GAS CIRCLE 4 | prelast circle in Mini Royale gametype
         }
         if ( level.players.size >=6 ) {
-            level.br_level.br_circleradii[0] = 8600; // DOESNT DO ANYTHING
+            level.br_level.br_circleradii[0] = 8600; // -
             level.br_level.br_circleradii[1] = 8600; // GAS CIRCLE 1
             level.br_level.br_circleradii[2] = 6000; // GAS CIRCLE 2
             level.br_level.br_circleradii[3] = 4500; // GAS CIRCLE 3
             level.br_level.br_circleradii[4] = 3500; // GAS CIRCLE 4 | prelast circle in Mini Royale gametype
         }
         if ( level.players.size >=12 ) {
-            level.br_level.br_circleradii[0] = 9800; // SOME NONSENSE
+            level.br_level.br_circleradii[0] = 9800; // -
             level.br_level.br_circleradii[1] = 9800; // GAS CIRCLE 1
             level.br_level.br_circleradii[2] = 8000; // GAS CIRCLE 2
             level.br_level.br_circleradii[3] = 6000; // GAS CIRCLE 3
@@ -69,9 +69,9 @@ DefineCirclesRadiuses( ) {
     }
     else
     {
-        level.br_level.br_circleradii[0] = 9800; // EMPTY CODE
+        level.br_level.br_circleradii[0] = 9800; // -
         level.br_level.br_circleradii[1] = 9800; // GAS CIRCLE 1
-        level.br_level.br_circleradii[2] = 7000; // // GAS CIRCLE 2
+        level.br_level.br_circleradii[2] = 7000; // GAS CIRCLE 2
         level.br_level.br_circleradii[3] = 5250; // GAS CIRCLE 3
         level.br_level.br_circleradii[4] = 3500; // GAS CIRCLE 4 | prelast circle in Mini Royale gametype
         level.br_level.br_circleradii[5] = 2000; // GAS CIRCLE 5 | last circle in Mini Royale gametype
