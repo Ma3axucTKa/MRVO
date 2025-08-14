@@ -1,5 +1,5 @@
 // MRVO 1.0 DEVELOPED & TESTED BY MAZA [Mini Royale Verdansk Original]
-// use this command scr_br_gametype mini;br_minplayers 0;seta playerssizeadopt 0;seta mrvo 1
+// use this command seta mrvo_active 1;scr_br_gametype mini;br_minplayers 0;seta playerssizeadopt 0;seta mrvo 1
 // OPTIONS: seta playerssizeadopt 1 | seta playerssizeadopt 0 - automatically adopts gas circles sizes for the count of players in lobby. enabled by default
 // OPTIONS: seta mrvo 1 | seta mrvo 0 - enable changes of circles sizes & timings
 // tested in 1.30, 1.34, 1.36, 1.38, 1.46 (caldera, thx to Kechioma)
@@ -26,6 +26,8 @@ Init( ) {
 	        level.br_level.br_circleclosetimes[3] = 30;  // 4th zone close
             level.br_level.br_circledelaytimes[4] = 45;  // 4-5 zones delay
 	        level.br_level.br_circleclosetimes[4] = 60;  // 5th zone close
+            // VEHICLES FIX CALL
+            level thread VehiclesFix( );
         }
 
     }
@@ -79,3 +81,15 @@ DefineCirclesRadiuses( ) {
 }
 
 // Not like in 1.20: since we now use Mini Royale gametype to ease the pain with recreating circle from the game start, zones start with [1] index, not [0] like it was in 1.20 MRON.
+
+VehiclesFix( ) {
+
+    level waittill("prematch_done"); // Wait until Warmup ends
+    
+    wait 30; // Average time for Host to get into collised area
+
+    level thread scripts\mp\gametypes\br_vehicles.gsc::brvehiclesreset( ); // Reset all vehicles
+    level thread scripts\mp\gametypes\br_vehicles.gsc::emptyallvehicles( );
+    level thread scripts\mp\gametypes\br_vehicles.gsc::spawninitialvehicles( ); // Respawn vehicles
+
+}
